@@ -1,0 +1,21 @@
+services:
+  flask-app:
+    build:
+      context: .
+      dockerfile: dockerfile-victim
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./logs:/code/logs
+    environment:
+      - FLASK_ENV=development
+    networks:
+      my-network:
+        ipv4_address: 172.20.0.2
+
+networks:
+  my-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24

@@ -1,0 +1,8 @@
+[2024-11-22 16:23:11,734] [INFO] - rest_app - Func:hello - Line:9 - name
+[2024-11-22 16:23:33,490] [INFO] - rest_app - Func:hello - Line:9 - name
+[2024-11-22 16:25:25,320] [INFO] - rest_app - Func:hello - Line:9 - injected: atom
+[2024-11-22 16:36:16,595] [INFO] - rest_app - Func:hello - Line:9 - injected: atom
+[2024-11-22 16:36:23,934] [INFO] - rest_app - Func:hello - Line:9 - injected: ato
+[2024-11-22 09:51:16,753] [INFO] - rest_app - Func:hello - Line:9 - injected: ato
+[2024-11-22 09:51:39,246] [INFO] - rest_app - Func:hello - Line:9 - injected: ato
+[2024-11-22 10:01:07,984] [INFO] - rest_app - Func:hello - Line:9 - injected: atom
