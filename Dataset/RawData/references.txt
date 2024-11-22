@@ -1,0 +1,8 @@
+XSS_dataset.zip
+https://www.kaggle.com/datasets/syedsaqlainhussain/cross-site-scripting-xss-dataset-for-deep-learning
+
+http_params.zip
+https://github.com/Morzeux/HttpParamsDataset
+
+learning_dataset.zip
+https://github.com/msudol/Web-Application-Attack-Datasets/tree/master/OriginalDataSets/ecml_pkdd
