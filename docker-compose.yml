@@ -1,14 +1,15 @@
 services:
-  flask-app:
+  xss-app:
     build:
       context: .
       dockerfile: dockerfile-victim
     ports:
-      - "5000:5000"
+      - "8000:8000"
     volumes:
       - ./logs:/code/logs
     environment:
       - FLASK_ENV=development
+      - TZ=Asia/Bangkok
     networks:
       my-network:
         ipv4_address: 172.20.0.2
