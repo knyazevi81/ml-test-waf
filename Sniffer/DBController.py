@@ -47,9 +47,9 @@ class DBController(object):
     def __create_single_entry(self, row) -> list:
         return [row['threat_type'], row['location']]
 
-    def read_request(self, id: str) -> tuple:
+    def read_request(self, id_: int) -> tuple:
         cursor = self.conn.cursor()
-        cursor.execute("SELECT * FROM logs AS l JOIN threats AS t ON l.id = t.log_id WHERE l.id = ?", (id,))
+        cursor.execute("SELECT * FROM logs AS l JOIN threats AS t ON l.id = t.log_id WHERE l.id = ?", (id_,))
         results = cursor.fetchall()
         log = dict()
         if len(results) != 0:
@@ -58,6 +58,8 @@ class DBController(object):
             log['host'] = results[0]['host']
             log['request'] = results[0]['request']
             log['method'] = results[0]['method']
+            log['body'] = results[0]['body']
+            log['headers'] = json.loads(results[0]['headers'])
         data = [self.__create_single_entry(row) for row in results]
         return log, data
 

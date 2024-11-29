@@ -1,7 +1,7 @@
 import json
 
 class Request(object):
-    def __init__(self, id_=None, 
+    def __init__(self, id_: int = None, 
                  timestamp: str = None, 
                  origin: str = None, 
                  host: str = None, 
