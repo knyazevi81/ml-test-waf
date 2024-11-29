@@ -9,4 +9,4 @@ COPY logs /code/logs
 WORKDIR /code/Victim
 
 # Define the command to run the application
-CMD [ "python3", "-m", "flask", "run", "--host=172.20.0.2", "--port=8000" ]
+CMD [ "python3", "-m", "flask", "run", "--host=172.20.0.3", "--port=8001" ]
