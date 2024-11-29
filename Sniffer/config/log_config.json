@@ -1,6 +1,6 @@
 {
-  "WAF": {
-    "file_name": "waf.log",
+  "Sniffer": {
+    "file_name": "sniffer.log",
     "log_level": "info",
     "backup_days": 3
   }

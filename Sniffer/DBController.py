@@ -3,7 +3,7 @@ import sqlite3
 import pandas as pd
 import json
 import os
-from Request import Request
+from Request.Request import Request
 
 
 class DBController(object):
@@ -18,8 +18,8 @@ class DBController(object):
         # Save the request to the database
         cursor = self.conn.cursor()
         obj.timestamp = datetime.datetime.now()
-        cursor.execute("INSERT INTO logs (timestamp, origin, host, request, method) VALUES (?, ?, ?, ?, ?)",
-                       (obj.timestamp, obj.origin, obj.host, obj.request, obj.method))
+        cursor.execute("INSERT INTO logs (timestamp, origin, host, request, method, body, headers) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                       (obj.timestamp, obj.origin, obj.host, obj.request, obj.method, obj.body, json.dumps(obj.headers)))
         obj.id = cursor.lastrowid
         # Save the whole request to a json file for later review
         file_name = str(obj.id) + '.json'

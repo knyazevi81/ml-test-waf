@@ -4,26 +4,10 @@ services:
       context: .
       dockerfile: dockerfile-victim
     ports:
-      - "8001:8001"
-    volumes:
-      - ./logs:/code/logs
-    environment:
-      - FLASK_ENV=development
-      - TZ=Asia/Bangkok
-    networks:
-      my-network:
-        ipv4_address: 172.20.0.3
-
-  waf:
-    build:
-      context: .
-      dockerfile: dockerfile-waf
-    ports:
       - "8000:8000"
     volumes:
       - ./logs:/code/logs
     environment:
-      - FLASK_ENV=development
       - TZ=Asia/Bangkok
     networks:
       my-network:

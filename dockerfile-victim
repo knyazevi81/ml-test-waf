@@ -4,9 +4,10 @@ ENV FLASK_APP=XssApp.py
 WORKDIR /code
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+COPY Request /code/Request
 COPY Victim /code/Victim
 COPY logs /code/logs
 WORKDIR /code/Victim
 
 # Define the command to run the application
-CMD [ "python3", "-m", "flask", "run", "--host=172.20.0.3", "--port=8001" ]
+CMD [ "python3", "-m", "flask", "run", "--host=172.20.0.2", "--port=8000" ]

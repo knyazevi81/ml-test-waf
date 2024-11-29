@@ -2,16 +2,16 @@ import scapy.all as scapy
 import urllib.parse
 import Logger
 import os
-from scapy.all import sniff, Raw, ifaces, send
+from scapy.all import sniff, Raw, ifaces
 from scapy.layers.http import HTTPRequest, HTTP
 from scapy.layers.inet import IP, TCP
-from scapy.sessions import IPSession, TCPSession
-from Request import Request
+from scapy.sessions import TCPSession
+from Request.Request import Request, interesting_header_list
 from DBController import DBController
 from Classifier import ThreatClassifier
 from argparse import ArgumentParser
 
-LOGGER = Logger.init_logging('sniffing', 'WAF')
+LOGGER = Logger.init_logging('Sniffer', 'Sniffer')
 
 LOGGER.info("Define arguments ...")
 parser = ArgumentParser()
@@ -32,60 +32,7 @@ db = DBController()
 threat_clf = ThreatClassifier()
 
 # define the interesting header fields
-header_interesting_fields = ['Http_Version',
-                             'A_IM',
-                             'Accept',
-                             'Accept_Charset',
-                             'Accept_Datetime',
-                             'Accept_Encoding', 
-                             'Accept_Language',
-                             'Access_Control_Request_Headers',
-                             'Access_Control_Request_Method',
-                             'Authorization',
-                             'Cache_Control',
-                             'Connection',
-                             'Content_Length',
-                             'Content_MD5',
-                             'Content_Type',
-                             'Cookie',
-                             'DNT',
-                             'Date',
-                             'Expect',
-                             'Forwarded',
-                             'From',
-                             'Front_End_Https',
-                             'If_Match',
-                             'If_Modified_Since',
-                             'If_None_Match',
-                             'If_Range',
-                             'If_Unmodified_Since',
-                             'Keep_Alive',
-                             'Max_Forwards',
-                             'Origin',
-                             'Permanent',
-                             'Pragma',
-                             'Proxy_Authorization',
-                             'Proxy_Connection',
-                             'Range',
-                             'Referer',
-                             'Save_Data',
-                             'TE',
-                             'Upgrade',
-                             'Upgrade_Insecure_Requests',
-                             'User_Agent',
-                             'Via',
-                             'Warning',
-                             'X_ATT_DeviceId',
-                             'X_Correlation_ID',
-                             'X_Csrf_Token',
-                             'X_Forwarded_For',
-                             'X_Forwarded_Host',
-                             'X_Forwarded_Proto',
-                             'X_Http_Method_Override',
-                             'X_Request_ID',
-                             'X_Requested_With',
-                             'X_UIDH',
-                             'X_Wap_Profile']
+header_interesting_fields = interesting_header_list()
 
 
 def get_header(packet: scapy.Packet) -> dict:
@@ -95,14 +42,6 @@ def get_header(packet: scapy.Packet) -> dict:
         if f is not None and f != 'None':
             headers[field] = f.decode()
     return headers
-
-
-def force_close_connection(src_ip, src_port, dst_ip, dst_port):
-    # Create a TCP FIN packet
-    fin_packet = IP(src=src_ip, dst=dst_ip) / TCP(sport=src_port, dport=dst_port, flags='FA')
-    # Send the packet
-    print(f"Force close connection from {src_ip}:{src_port} to {dst_ip}:{dst_port}")
-    send(fin_packet)
 
 
 def sniffing_function(packet: scapy.Packet) -> None:
