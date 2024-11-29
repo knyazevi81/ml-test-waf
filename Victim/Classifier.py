@@ -111,15 +111,17 @@ class ThreatClassifier(object):
         locations = []
         for name, value in request_parameters.items():
             for e in value:
+                # count the number of characters in the request path and query parameters
                 parameters.append([len(e)])
                 locations.append('Request')  
         for name, value in body_parameters.items():
             if isinstance(value, list):
-                # array of values
                 for e in value:
+                    # count the number of characters in the parameter value
                     parameters.append([len(e)])
                     locations.append('Body')
             else:
+                # count the number of characters in the parameter value
                 parameters.append([len(value)])
                 locations.append('Body')
 

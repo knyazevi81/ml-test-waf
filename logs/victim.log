@@ -1,0 +1,109 @@
+[2024-11-29 18:32:44,123] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:32:44,127] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [POST]>
+[2024-11-29 18:32:44,128] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:32:44,131] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:32:44,134] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [POST]>
+[2024-11-29 18:32:44,138] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:32:44,140] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test?param1=-9265")+or+7834%3D1685' [GET]>
+[2024-11-29 18:32:44,141] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:32:44,143] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:32:44,146] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:32:44,147] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [POST]>
+[2024-11-29 18:32:44,150] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:32:44,168] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [POST]>
+[2024-11-29 18:32:44,186] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'parameter-tampering': 'Body'}
+[2024-11-29 18:32:44,186] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:32:44,188] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:32:44,205] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'parameter-tampering': 'Body'}
+[2024-11-29 18:32:44,205] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:32:44,208] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:32:44,226] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [POST]>
+[2024-11-29 18:32:44,243] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'xss': 'Body'}
+[2024-11-29 18:32:44,244] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:32:44,246] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:32:44,265] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'xss': 'Cookie'}
+[2024-11-29 18:32:44,265] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:32:44,268] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test?param1=-9265")+or+7834%3D1685' [GET]>
+[2024-11-29 18:32:44,286] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'xss': 'Cookie'}
+[2024-11-29 18:32:44,286] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:32:44,289] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:32:44,303] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'cmdi': 'User Agent'}
+[2024-11-29 18:32:44,303] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:32:44,305] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:32:44,317] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'path-traversal': 'Accept Encoding'}
+[2024-11-29 18:32:44,317] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:32:44,320] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:32:44,336] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'path-traversal': 'Cookie'}
+[2024-11-29 18:32:44,336] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:32:44,337] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [POST]>
+[2024-11-29 18:32:44,358] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'sqli': 'Body', 'cmdi': 'Accept Encoding', 'parameter-tampering': 'Body'}
+[2024-11-29 18:32:44,358] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:33:10,176] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:33:10,179] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [POST]>
+[2024-11-29 18:33:10,182] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:33:10,185] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:33:10,188] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [POST]>
+[2024-11-29 18:33:10,191] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:33:10,193] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test?param1=-9265")+or+7834%3D1685' [GET]>
+[2024-11-29 18:33:10,196] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:33:10,198] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:33:10,199] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:33:10,202] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [POST]>
+[2024-11-29 18:33:10,203] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:33:15,756] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [POST]>
+[2024-11-29 18:33:52,648] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'parameter-tampering': 'Body'}
+[2024-11-29 18:33:52,648] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:33:53,970] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:34:24,005] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'parameter-tampering': 'Body'}
+[2024-11-29 18:34:24,005] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:34:24,590] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:34:26,831] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [POST]>
+[2024-11-29 18:34:28,222] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'xss': 'Body'}
+[2024-11-29 18:34:28,222] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:34:28,854] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:34:28,889] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'xss': 'Cookie'}
+[2024-11-29 18:34:28,889] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:34:28,892] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test?param1=-9265")+or+7834%3D1685' [GET]>
+[2024-11-29 18:34:28,924] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'xss': 'Cookie'}
+[2024-11-29 18:34:28,924] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:34:28,926] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:34:28,953] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'cmdi': 'User Agent'}
+[2024-11-29 18:34:28,953] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:34:28,956] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:34:28,982] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'path-traversal': 'Accept Encoding'}
+[2024-11-29 18:34:28,982] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:34:28,985] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:34:29,014] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'path-traversal': 'Cookie'}
+[2024-11-29 18:34:29,014] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:34:29,018] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [POST]>
+[2024-11-29 18:34:55,503] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'sqli': 'Body', 'cmdi': 'Accept Encoding', 'parameter-tampering': 'Body'}
+[2024-11-29 18:34:55,503] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:35:28,759] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:35:28,762] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [POST]>
+[2024-11-29 18:35:28,765] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:35:28,768] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:35:28,769] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [POST]>
+[2024-11-29 18:35:28,772] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:35:28,775] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test?param1=-9265")+or+7834%3D1685' [GET]>
+[2024-11-29 18:35:28,777] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:35:28,779] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:35:28,781] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:35:28,783] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [POST]>
+[2024-11-29 18:35:28,786] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:35:28,815] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [POST]>
+[2024-11-29 18:37:29,500] [INFO] - XssApp - Func:hello_wh_waf - Line:58 - Threats detected: {'parameter-tampering': 'Body'}
+[2024-11-29 18:37:29,501] [INFO] - XssApp - Func:hello_wh_waf - Line:59 - Request blocked
+[2024-11-29 18:37:29,505] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:41:22,156] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:41:22,159] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [POST]>
+[2024-11-29 18:41:22,162] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:41:22,167] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:41:22,168] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [POST]>
+[2024-11-29 18:41:22,173] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:41:22,175] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test?param1=-9265")+or+7834%3D1685' [GET]>
+[2024-11-29 18:41:22,177] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:41:22,180] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:41:22,182] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [GET]>
+[2024-11-29 18:41:22,184] [INFO] - XssApp - Func:hello - Line:46 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello/test' [POST]>
+[2024-11-29 18:41:22,187] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [GET]>
+[2024-11-29 18:41:22,216] [INFO] - XssApp - Func:hello_wh_waf - Line:53 - Request: <Request 'http://127.0.0.1:8000/api/v1/hello-wh-waf/test' [POST]>
