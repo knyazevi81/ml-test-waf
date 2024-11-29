@@ -2,7 +2,7 @@
 docker-compose up -d
 
 # Test the application
-GET http://127.0.0.1:5000/api/v1/hello/atom
+GET http://127.0.0.1:8000/api/v1/hello/atom
 
 # Stop & Remove the application
 docker-compose down --rmi local

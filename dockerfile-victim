@@ -1,13 +1,14 @@
 FROM python:3.12.7-slim
-ENV FLASK_APP=XssApp.py
+ENV FLASK_APP=Victim/XssApp.py
 
 WORKDIR /code
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-COPY Request /code/Request
+COPY Classifier /code/Classifier
 COPY Victim /code/Victim
+COPY Request /code/Request
+COPY config /code/config
 COPY logs /code/logs
-WORKDIR /code/Victim
 
 # Define the command to run the application
 CMD [ "python3", "-m", "flask", "run", "--host=172.20.0.2", "--port=8000" ]

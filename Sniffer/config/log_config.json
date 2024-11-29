@@ -1,7 +1,0 @@
-{
-  "Sniffer": {
-    "file_name": "sniffer.log",
-    "log_level": "info",
-    "backup_days": 3
-  }
-}

@@ -1,0 +1,19 @@
+{
+  "Victim": {
+    "file_name": "victim.log",
+    "log_level": "info",
+    "backup_days": 3
+  },
+  
+  "Sniffer": {
+    "file_name": "sniffer.log",
+    "log_level": "info",
+    "backup_days": 3
+  },
+  
+  "__main__": {
+    "file_name": "test.log",
+    "log_level": "info",
+    "backup_days": 3
+  }
+}

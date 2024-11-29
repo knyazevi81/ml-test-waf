@@ -1,7 +1,0 @@
-{
-  "Victim": {
-    "file_name": "victim.log",
-    "log_level": "info",
-    "backup_days": 3
-  }
-}

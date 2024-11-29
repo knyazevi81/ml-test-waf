@@ -5,8 +5,12 @@ from Request.Request import Request
 
 class ThreatClassifier(object):
     def __init__(self):
-        self.clf = joblib.load("../Classifier/predictor.joblib")
-        self.pt_clf = joblib.load("../Classifier/pt_predictor.joblib")
+        try:
+            self.clf = joblib.load("../Classifier/predictor.joblib")
+            self.pt_clf = joblib.load("../Classifier/pt_predictor.joblib")
+        except FileNotFoundError:
+            self.clf = joblib.load("Classifier/predictor.joblib")
+            self.pt_clf = joblib.load("Classifier/pt_predictor.joblib")
 
     def __unquote(self, text: str) -> str:
         """
