@@ -1,5 +1,5 @@
 import joblib
-from Sniffer.Sniffer import Request
+from Request import Request
 import urllib.parse
 import json
 
