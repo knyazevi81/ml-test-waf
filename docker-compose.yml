@@ -1,17 +1,31 @@
 services:
-  xss-app:
+  waf-app:
     build:
       context: .
-      dockerfile: dockerfile-victim
+      dockerfile: dockerfile-firewall
     ports:
       - "8000:8000"
     volumes:
       - ./logs:/code/logs
     environment:
       - TZ=Asia/Bangkok
+      - APP_URL=http://172.20.0.10:8001
     networks:
       my-network:
         ipv4_address: 172.20.0.2
+  xss-app:
+    build:
+      context: .
+      dockerfile: dockerfile-app
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./logs:/code/logs
+    environment:
+      - TZ=Asia/Bangkok
+    networks:
+      my-network:
+        ipv4_address: 172.20.0.10
 
 networks:
   my-network:

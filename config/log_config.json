@@ -1,6 +1,12 @@
 {
-  "Victim": {
-    "file_name": "victim.log",
+  "WebAppFirewall": {
+    "file_name": "firewall.log",
+    "log_level": "info",
+    "backup_days": 3
+  },
+
+  "WebApp": {
+    "file_name": "webapp.log",
     "log_level": "info",
     "backup_days": 3
   },
