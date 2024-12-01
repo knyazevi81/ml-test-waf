@@ -1,11 +1,11 @@
 FROM python:3.12.7-slim
-ENV FLASK_APP=Victim/XssApp.py
+ENV FLASK_APP=WebAppFirewall/Firewall.py
 
 WORKDIR /code
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY Classifier /code/Classifier
-COPY Victim /code/Victim
+COPY WebAppFirewall /code/Victim
 COPY Request /code/Request
 COPY config /code/config
 COPY logs /code/logs
