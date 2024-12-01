@@ -50,7 +50,8 @@ if __name__ == '__main__':
     print(classification_report(testY, preds))
     cm = confusion_matrix(testY, preds, labels=pipe.classes_)
     disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=pipe.classes_)
-    plt.savefig('confusion_matrix.png')
+    disp.plot()
+    plt.savefig('confusion_matrix_testing.png')
     
     print("Model tested")
     print("Saving model...")
