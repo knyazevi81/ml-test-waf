@@ -2,10 +2,10 @@
 docker-compose up -d
 
 # Test the application on browser 1 (NO WAF)
-http://127.0.0.1:8000/api/v1/hello-wh-waf/t?q="><script>alert("XSS");</script>
+http://127.0.0.1:8001/api/v1/hello/t?q="><script>alert("XSS");</script>
 
 # Test the application on browser 2 (WAF)
-http://127.0.0.1:8001/api/v1/hello/t?q="><script>alert("XSS");</script>
+http://127.0.0.1:8000/api/v1/hello-wh-waf/t?q="><script>alert("XSS");</script>
 
 # run sniffer by Sniffer Module (sniffing on port 8000)
 Sniffer/Sniffer.py
