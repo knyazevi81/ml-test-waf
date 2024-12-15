@@ -80,6 +80,11 @@ def main():
             iface = ifaces.dev_from_index(1)
             LOGGER.info(f"Interface: {iface}")
             sniff(prn=sniffing_function, iface=iface, filter=f'port {args.port}', session = TCPSession)
+        elif os.name == 'posix':
+            # mac os
+            iface = 'lo0'
+            LOGGER.info(f"Interface: {iface}")
+            sniff(prn=sniffing_function, iface=iface, filter=f'port {args.port}', session = TCPSession)
         else:
             # linux
             iface = 'lo'
