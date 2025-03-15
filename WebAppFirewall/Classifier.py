@@ -1,7 +1,7 @@
 import joblib
 import urllib.parse
 import json
-from Request.Request import Request
+from Sniffer.Request import Request
 
 class ThreatClassifier(object):
     def __init__(self):

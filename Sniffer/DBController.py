@@ -3,7 +3,7 @@ import sqlite3
 import pandas as pd
 import json
 import os
-from Request.Request import Request
+from Sniffer import Request
 
 
 class DBController(object):

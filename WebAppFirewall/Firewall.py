@@ -4,7 +4,7 @@ import os
 from flask_cors import CORS
 from flask import Flask, request, jsonify
 from Classifier import ThreatClassifier
-from Request.Request import Request, interesting_header_list
+from Sniffer.Request import Request, interesting_header_list
 
 app = Flask(__name__)
 CLF = ThreatClassifier()
